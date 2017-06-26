@@ -1,8 +1,9 @@
-import { FetchWeather } from '../actions/index';
+import { FETCH_WEATHER } from '../actions/index';
 
 export default function (state = [], action){
+	console.log(state, action)
 	switch(action.type){
-		case FetchWeather:
+		case FETCH_WEATHER:
 			return state.concat([action.payload.data])
 	}
 	return state;
